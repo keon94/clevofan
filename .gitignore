@@ -4,3 +4,5 @@
 *.cmd
 *.symvers
 *.order
+*.mod.c
+rpmbuild
