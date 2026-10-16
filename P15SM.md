@@ -180,23 +180,7 @@ Make it executable:
 sudo chmod 0755 /usr/local/sbin/clevo-fan-control
 ```
 
-This script dynamically finds the `P15SM` hwmon device and the `coretemp` sensor labeled `Package id 0`.
-
-Its policy is:
-
-```text
-<=49°C       fan off
-55°C         PWM 80
-60°C         PWM 100
-65°C         PWM 130
-70°C         PWM 160
-75°C         PWM 190
-80°C         PWM 220
->=85°C       PWM 255
->=90°C       emergency full speed
-```
-
-It uses 49/55°C hysteresis so the fan does not chatter near the threshold. When starting from stopped, it kicks the fan at PWM 100 for one second before dropping to the curve target. On exit, the `finally` block writes `2` to `pwm1_enable`, returning fan control to the EC.
+This script use hysteresis to make fan operation smooth across temperature changes.
 
 ## 6. Install the systemd service
 
@@ -210,7 +194,7 @@ with:
 
 ```ini
 [Unit]
-Description=Clevo P15SM CPU Fan Controller
+Description=Clevo P15SM Fan Controller
 After=multi-user.target
 ConditionPathExists=/sys/class/hwmon
 
