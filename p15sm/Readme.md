@@ -1,6 +1,6 @@
 # clevofan on Fedora — build, install, and manage as an akmods kernel module
 
-This documents the working setup used on the Clevo P15SM / Sager NP8230 running Fedora 44.
+This documents the working setup used on the Clevo P15SM / Sager NP8230 running Fedora 44. It should be similar on other distros that are Systemd-based, but some adjustments to the individual commands.
 
 The goal is to take the `clevofan` source, compile and test it, then package it with `akmods` so Fedora automatically rebuilds the module for new kernels.
 
@@ -22,6 +22,8 @@ force_match=2
 ```
 
 ## 1. Install build dependencies
+
+**All commands assume you are at the root of the repo.**
 
 ```bash
 sudo dnf install \

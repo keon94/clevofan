@@ -7,8 +7,9 @@ Kernel module that provides fan control for various Clevo mainboards via standar
 W35_37ET: supported and completely tested
 W350SS:   not tested
 P170SM:   not tested
+P15SM: supported and completely tested. See installation [docs](./p15sm/Readme.md). 
 ```
-* Teoretically supports all Clevo laptops but I have to add correct DMI_BOARD_NAME string and fan number to make module load without force_match parameter. Please open an issue "Add support for *model*" and attach the output file of *dmi_info_dump* script, then I'll add support (look "parameters" section for tests).
+* Theoretically supports all Clevo laptops but I have to add correct DMI_BOARD_NAME string and fan number to make module load without force_match parameter. Please open an issue "Add support for *model*" and attach the output file of *dmi_info_dump* script, then I'll add support (look "parameters" section for tests).
 
 ## Features
 
@@ -41,3 +42,4 @@ modprobe clevofan
 ```
 ## Contributing
 Advices and pull requests are welcome. You can contact me at pilia.simone96@gmail.com 
+P15SM support added by Keon Amini (keon.a380@gmail.com).
