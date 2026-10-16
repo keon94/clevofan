@@ -172,7 +172,7 @@ Create it:
 sudo nano /usr/local/sbin/clevo-fan-control
 ```
 
-Copy the code in [fan-control-service.py](./fan-control-service.py) into it. This will be the core logic the systemd service will run for PWM management.
+Copy the code in [clevo-fan-control.py](./clevo-fan-control.py) into it. This will be the core logic the systemd service will run for PWM management.
 
 Make it executable:
 
