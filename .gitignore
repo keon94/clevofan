@@ -1,0 +1,8 @@
+*.ko
+*.mod
+*.o
+*.cmd
+*.symvers
+*.order
+*.mod.c
+rpmbuild

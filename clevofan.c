@@ -319,7 +319,7 @@ static int __init clevofan_init(void)
 {
     acpi_handle ec_handle;
     
-    if(strncmp(dmi_get_system_info(DMI_BOARD_VENDOR), "CLEVO CO.", 9) != 0)
+    if(strncmp(dmi_get_system_info(DMI_BOARD_VENDOR), "CLEVO CO.", 9) != 0 && force_match == 0)
         return -ENODEV;
     if (!dmi_first_match(clevo_dmi) && force_match == 0)
         return -ENODEV;
