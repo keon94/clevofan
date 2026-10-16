@@ -35,7 +35,7 @@ CURVE = [
 GPU_INDEX = "0"  # nvidia-smi index of the GPU
 GPU_CURVE = [
     (0, 0),
-    (45, 75),
+    (45, 76),
     (50, 80),
     (55, 100),
     (60, 120),
